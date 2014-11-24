@@ -4,7 +4,7 @@ title: "LiME Module for Nexus 4 - Kitkat 4.4.4"
 modified:
 categories: 
 excerpt:
-tags: [volatility, kernel, forensics, module, android, mako]
+tags: [volatility, kernel, forensics, module, android, mako, nexus]
 image:
   feature:
 date: 2014-11-24T17:59:25+04:00
@@ -13,12 +13,16 @@ date: 2014-11-24T17:59:25+04:00
 [LiME ~ Linux Memory Extractor](https://github.com/504ensicsLabs/LiME) allows the acquisition of volatile memory from Linux and Linux-based devices.
 Nexus 4 stock kernel doesnt have support LKM, you can build module against stock kernel unless you rebuild kernel with LKM support.
 
-* Device:Mako
-* Kernel Version: franco
+* Device: Mako aka Nexus 4
+* Kernel Version: franco #213
 * Android: 4.4.4 
 * Build: KTU84P 
 
-<a markdown="0" href="http://192.241.177.15/Nexus4/4.4/boot-r213.img">franco kernel</a>
+<a markdown="0" href="http://franciscofranco.minooch.com/Nexus4/4.4/zips/franco.Kernel-nightly-r213.zip">Kernel</a>
+<a markdown="0" href="/lime-franco.ko.gz">LiME Module</a>
+
+
+> You can flash kernel with CWM or TWRP
 
 ## Usage
 LiME utilizes the insmod command to load the module, passing required arguments for its execution.
@@ -42,13 +46,14 @@ dio (optional):    1 ~ attempt to enable Direct IO
 
 Acquisition over the network
 {% highlight text %}
-$ adb push lime.ko /sdcard/lime-mako.ko
+$ gzip -d lime-franco.ko.gz
+$ adb push lime-franco.ko /sdcard/lime-mako.ko
 $ adb forward tcp:4444 tcp:4444
 $ adb shell
 # insmod /sdcard/lime.ko "path=tcp:4444 format=lime"
 {% endhighlight %}
 
-Nw on the host machine, we can establish the connection and acquire memory using netcat
+from host machine use netcat to establish the connection and acquire memory
 {% highlight text %}
 $ nc localhost 4444 > mako.lime
 {% endhighlight %}
