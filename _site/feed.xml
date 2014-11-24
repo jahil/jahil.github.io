@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://jahil.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://jahil.github.io" />
-<updated>2014-11-24T15:59:32+04:00</updated>
+<updated>2014-11-24T16:06:41+04:00</updated>
 <id>http://jahil.github.io/</id>
 <author>
   <name>Mohsin Mirza</name>
@@ -25,9 +25,12 @@
     <email>named.conf@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Here’s a brief post about very cool feature of a tool called mimikatz.
-I’m very grateful to the tool’s author for bringing it to my attention. Until that point, I didn’t realise it was possible to recover the cleartext passwords of logged on windows users. Something that I’m sure most pentesters would find very useful.&lt;/p&gt;
+I’m very grateful to the tool’s author for bringing it to my attention. Until that point, I didn’t realise it was possible to recover the cleartext passwords of logged on windows users. Something that I’m sure most pentesters would find very useful.
+—&lt;/p&gt;
 
-&lt;p&gt;Here’s some sample output provided by the author:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Here’s some sample output provided by the author:&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;mimikatz 1.0 x86 (pre-alpha)    /* Traitement du Kiwi */
 
