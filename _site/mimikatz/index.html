@@ -171,7 +171,9 @@ Domaine d&#39;authentification  : vm-w7-ult
         wdigest :       waza1234/
         tspkg :         waza1234/</code></pre></div>
 
-<hr />
+<p>I wondered why the cleartext password would need to be stored in LSASS – after all every pentester will tell you that you don’t need the password to authenticate, just the hash.
+A bit of googling seems to indicate that wdigest (the password) is required to support HTTP Digest Authentication and other schemes that require the authenticating party to know the password – and not just the hash.
+—</p>
 
       <hr />
       <footer role="contentinfo">

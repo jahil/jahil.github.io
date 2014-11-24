@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://jahil.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://jahil.github.io" />
-<updated>2014-11-24T16:08:17+04:00</updated>
+<updated>2014-11-24T16:26:56+04:00</updated>
 <id>http://jahil.github.io/</id>
 <author>
   <name>Mohsin Mirza</name>
@@ -64,7 +64,9 @@ Domaine d&amp;#39;authentification  : vm-w7-ult
         wdigest :       waza1234/
         tspkg :         waza1234/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;I wondered why the cleartext password would need to be stored in LSASS – after all every pentester will tell you that you don’t need the password to authenticate, just the hash.
+A bit of googling seems to indicate that wdigest (the password) is required to support HTTP Digest Authentication and other schemes that require the authenticating party to know the password – and not just the hash.
+—&lt;/p&gt;
 
   &lt;p&gt;&lt;a href=&quot;http://jahil.github.io/mimikatz/&quot;&gt;Mimikatz&lt;/a&gt; was originally published by Mohsin Mirza at &lt;a href=&quot;http://jahil.github.io&quot;&gt;Wandering Around&lt;/a&gt; on November 23, 2014.&lt;/p&gt;</content>
 </entry>
