@@ -3,29 +3,29 @@
   
   
   <url>
-    <loc>http://10.8.19.250:4000/mimikatz/</loc>
+    <loc>http://jahil.github.io/mimikatz/</loc>
     <lastmod>2014-11-23T17:30:31+04:00</lastmod>
     <priority>0.8</priority>
   </url>
   
   
   <url>
-    <loc>http://10.8.19.250:4000/</loc>
-    <lastmod>2014-11-23T19:50:45+04:00</lastmod>
+    <loc>http://jahil.github.io/</loc>
+    <lastmod>2014-11-24T15:47:49+04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>http://10.8.19.250:4000/about/</loc>
-    <lastmod>2014-11-23T19:50:45+04:00</lastmod>
+    <loc>http://jahil.github.io/about/</loc>
+    <lastmod>2014-11-24T15:47:49+04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://10.8.19.250:4000/posts/</loc>
-    <lastmod>2014-11-23T19:50:45+04:00</lastmod>
+    <loc>http://jahil.github.io/posts/</loc>
+    <lastmod>2014-11-24T15:47:49+04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
