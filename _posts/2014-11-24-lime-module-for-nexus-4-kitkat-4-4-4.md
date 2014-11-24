@@ -19,7 +19,8 @@ Nexus 4 stock kernel doesnt have support LKM, you can build module against stock
 * Build: KTU84P 
 
 <a markdown="0" href="http://franciscofranco.minooch.com/Nexus4/4.4/zips/franco.Kernel-nightly-r213.zip">Kernel</a>
-<a markdown="0" href="/lime-franco.ko.gz">LiME Module</a>
+
+<a markdown="0" href="https://github.com/jahil/jahil.github.io/raw/master/_site/lime-module-for-nexus-4-kitkat-4-4-4/lime-franco.ko.gz">LiME Module</a>
 
 
 > You can flash kernel with CWM or TWRP
