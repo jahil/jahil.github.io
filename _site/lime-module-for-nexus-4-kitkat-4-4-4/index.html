@@ -164,7 +164,7 @@ dio (optional):    1 ~ attempt to enable Direct IO
 
 <h2 id="examples">Examples</h2>
 
-<p>Acquisition over the network</p>
+<p>Memory acquisition over the network</p>
 
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ gzip -d lime-franco.ko.gz
 $ adb push lime-franco.ko /sdcard/lime-mako.ko
@@ -176,10 +176,11 @@ $ adb shell
 
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ nc localhost 4444 &gt; mako.lime</code></pre></div>
 
-<p>Acquisition to sdcard</p>
+<p>Memory acquisition to sdcard</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text"># insmod /sdcard/lime-mako.ko &quot;path=/sdcard/ram.lime format=lime&quot;</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># insmod /sdcard/lime-mako.ko &quot;path=/sdcard/mako.lime format=lime&quot;</code></pre></div>
 
+<p>VOLA!! - copy volatility profile into overlay directory and have fun!.</p>
 
       <hr />
       <footer role="contentinfo">

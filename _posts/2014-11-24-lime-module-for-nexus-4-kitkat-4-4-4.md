@@ -44,7 +44,7 @@ dio (optional):    1 ~ attempt to enable Direct IO
 
 ## Examples
 
-Acquisition over the network
+Memory acquisition over the network
 {% highlight text %}
 $ gzip -d lime-franco.ko.gz
 $ adb push lime-franco.ko /sdcard/lime-mako.ko
@@ -58,7 +58,9 @@ from host machine use netcat to establish the connection and acquire memory dump
 $ nc localhost 4444 > mako.lime
 {% endhighlight %}
 
-Acquisition to sdcard
+Memory acquisition to sdcard
 {% highlight text %}
-# insmod /sdcard/lime-mako.ko "path=/sdcard/ram.lime format=lime"
+# insmod /sdcard/lime-mako.ko "path=/sdcard/mako.lime format=lime"
 {% endhighlight %}
+
+VOLA!! - copy volatility profile into overlay directory and have fun!.
