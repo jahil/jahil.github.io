@@ -11,7 +11,7 @@ date: 2014-11-24T17:59:25+04:00
 ---
 
 [LiME ~ Linux Memory Extractor](https://github.com/504ensicsLabs/LiME) allows the acquisition of volatile memory from Linux and Linux-based devices.
-Nexus 4 stock kernel doesnt have support LKM, you can build module against stock kernel unless you rebuild kernel with LKM support.
+Nexus 4 stock kernel doesnt support LKM, you can build module against stock kernel unless you rebuild kernel with LKM support.
 
 * Device: Mako aka Nexus 4
 * Kernel Version: franco #213
@@ -21,9 +21,10 @@ Nexus 4 stock kernel doesnt have support LKM, you can build module against stock
 <a markdown="0" href="http://franciscofranco.minooch.com/Nexus4/4.4/zips/franco.Kernel-nightly-r213.zip">Kernel</a>
 <br>
 <a markdown="0" href="https://github.com/jahil/jahil.github.io/raw/master/_site/lime-module-for-nexus-4-kitkat-4-4-4/lime-franco.ko.gz">LiME Module</a>
+<br>
 
 
-**You can flash kernel with CWM or TWRP**
+*You can flash kernel with CWM or TWRP*
 
 ## Usage
 LiME utilizes the insmod command to load the module, passing required arguments for its execution.
