@@ -19,11 +19,11 @@ Nexus 4 stock kernel doesnt have support LKM, you can build module against stock
 * Build: KTU84P 
 
 <a markdown="0" href="http://franciscofranco.minooch.com/Nexus4/4.4/zips/franco.Kernel-nightly-r213.zip">Kernel</a>
-
+<br>
 <a markdown="0" href="https://github.com/jahil/jahil.github.io/raw/master/_site/lime-module-for-nexus-4-kitkat-4-4-4/lime-franco.ko.gz">LiME Module</a>
 
 
-> You can flash kernel with CWM or TWRP
+**You can flash kernel with CWM or TWRP**
 
 ## Usage
 LiME utilizes the insmod command to load the module, passing required arguments for its execution.
@@ -51,7 +51,7 @@ $ gzip -d lime-franco.ko.gz
 $ adb push lime-franco.ko /sdcard/lime-mako.ko
 $ adb forward tcp:4444 tcp:4444
 $ adb shell
-# insmod /sdcard/lime.ko "path=tcp:4444 format=lime"
+# insmod /sdcard/lime-mako.ko "path=tcp:4444 format=lime"
 {% endhighlight %}
 
 from host machine use netcat to establish the connection and acquire memory
@@ -61,5 +61,5 @@ $ nc localhost 4444 > mako.lime
 
 Acquisition to sdcard
 {% highlight text %}
-# insmod /sdcard/lime.ko "path=/sdcard/ram.lime format=lime"
+# insmod /sdcard/lime-mako.ko "path=/sdcard/ram.lime format=lime"
 {% endhighlight %}
