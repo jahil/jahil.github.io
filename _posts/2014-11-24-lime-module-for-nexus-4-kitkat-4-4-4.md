@@ -2,7 +2,7 @@
 layout: post
 title: "LiME Module for Nexus 4 - Kitkat 4.4.4"
 modified:
-categories: 
+categories: [volatility, forensics]
 excerpt:
 tags: [volatility, kernel, forensics, module, android, mako, nexus]
 image:
@@ -15,14 +15,13 @@ Nexus 4 stock kernel doesnt support LKM, you can build module against stock kern
 
 * Device: Mako aka Nexus 4
 * Kernel Version: franco #213
+* Kernel Version: [franco #213](http://franciscofranco.minooch.com/Nexus4/4.4/zips/franco.Kernel-nightly-r213.zip)
 * Android: 4.4.4 
 * Build: KTU84P 
 
-<a markdown="0" href="http://franciscofranco.minooch.com/Nexus4/4.4/zips/franco.Kernel-nightly-r213.zip">Kernel</a>
 <br>
 <a markdown="0" href="https://github.com/jahil/jahil.github.io/raw/master/_site/lime-module-for-nexus-4-kitkat-4-4-4/lime-franco.ko.gz">LiME Module</a>
 <br>
-
 
 *You can flash kernel with CWM or TWRP*
 
