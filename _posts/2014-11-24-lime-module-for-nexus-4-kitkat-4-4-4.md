@@ -2,7 +2,7 @@
 layout: post
 title: "LiME Module for Nexus 4 - Kitkat 4.4.4"
 modified:
-categories: [volatility, kernel, forensics]
+categories:
 excerpt:
 tags: [volatility, kernel, forensics, module, android, mako, nexus]
 image:

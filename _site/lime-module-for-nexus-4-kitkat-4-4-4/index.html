@@ -5,15 +5,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>All Posts &#8211; Wandering Around</title>
-<meta name="description" content="A List of Posts">
-<meta name="keywords" content="">
+<title>LiME Module for Nexus 4 - Kitkat 4.4.4 &#8211; Wandering Around</title>
+
+<meta name="keywords" content="volatility, kernel, forensics, module, android, mako, nexus">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="All Posts">
-<meta name="twitter:description" content="A List of Posts">
+<meta name="twitter:title" content="LiME Module for Nexus 4 - Kitkat 4.4.4">
+
 <meta name="twitter:site" content="@mohsinmirza">
 <meta name="twitter:creator" content="@mohsinmirza">
 
@@ -23,16 +23,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="All Posts">
-<meta property="og:description" content="A List of Posts">
-<meta property="og:url" content="http://jahil.github.io/posts/">
+<meta property="og:title" content="LiME Module for Nexus 4 - Kitkat 4.4.4">
+
+<meta property="og:url" content="http://jahil.github.io/lime-module-for-nexus-4-kitkat-4-4-4/">
 <meta property="og:site_name" content="Wandering Around">
 
 
 
 
 
-<link rel="canonical" href="http://jahil.github.io/posts/">
+<link rel="canonical" href="http://jahil.github.io/lime-module-for-nexus-4-kitkat-4-4-4/">
 <link href="http://jahil.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Wandering Around Feed">
 <link rel="author" href="http://plus.google.com/++MohsinMirza?rel=author">
 
@@ -71,7 +71,7 @@
 
 </head>
 
-<body class="post-index">
+<body class="post">
 
 <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
 
@@ -100,8 +100,9 @@
 
 
 
-<div class="article-author-side">
-  
+<div id="main" role="main">
+  <div class="article-author-side">
+    
 
 
 
@@ -122,36 +123,105 @@
 
 
 
-</div>
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="http://jahil.github.io/lime-module-for-nexus-4-kitkat-4-4-4/" rel="bookmark" title="LiME Module for Nexus 4 - Kitkat 4.4.4">LiME Module for Nexus 4 - Kitkat 4.4.4</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p><a href="https://github.com/504ensicsLabs/LiME">LiME ~ Linux Memory Extractor</a> allows the acquisition of volatile memory from Linux and Linux-based devices.
+Nexus 4 stock kernel doesnt support LKM, you can build module against stock kernel unless you rebuild kernel with LKM support.</p>
 
-<div id="index">
-  <h1>All Posts</h1>
-    
+<ul>
+  <li>Device: Mako aka Nexus 4</li>
+  <li>Kernel Version: <a href="http://franciscofranco.minooch.com/Nexus4/4.4/zips/franco.Kernel-nightly-r213.zip">franco #213</a></li>
+  <li>Android: 4.4.4 </li>
+  <li>Build: KTU84P </li>
+  <li>LiME Module: <a href="https://github.com/jahil/jahil.github.io/raw/master/_site/lime-module-for-nexus-4-kitkat-4-4-4/lime-franco.ko.gz">pre-compiled</a></li>
+</ul>
+
+<p><br />
+<em>Tip: You can flash kernel with CWM or TWRP</em>
+<br /></p>
+
+<h2 id="usage">Usage</h2>
+<p>LiME utilizes the insmod command to load the module, passing required arguments for its execution.</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">insmod ./lime.ko &quot;path=&lt;outfile | tcp:&lt;port&gt;&gt; format=&lt;raw|padded|lime&gt; [dio=&lt;0|1&gt;]&quot;
+
+path (required):   outfile ~ name of file to write to on local system (SD Card)
+        tcp:port ~ network port to communicate over
+
+format (required): raw ~ concatenates all System RAM ranges
+        padded ~ pads all non-System RAM ranges with 0s
+        lime ~ each range prepended with fixed-size header containing address space info
+
+dio (optional):    1 ~ attempt to enable Direct IO
+        0 ~ default, do not attempt Direct IO</code></pre></div>
+
+<h2 id="examples">Examples</h2>
+
+<p>Acquisition over the network</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ gzip -d lime-franco.ko.gz
+$ adb push lime-franco.ko /sdcard/lime-mako.ko
+$ adb forward tcp:4444 tcp:4444
+$ adb shell
+# insmod /sdcard/lime-mako.ko &quot;path=tcp:4444 format=lime&quot;</code></pre></div>
+
+<p>from host machine use netcat to establish the connection and acquire memory</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ nc localhost 4444 &gt; mako.lime</code></pre></div>
+
+<p>Acquisition to sdcard</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text"># insmod /sdcard/lime-mako.ko &quot;path=/sdcard/ram.lime format=lime&quot;</code></pre></div>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+
+
+
+	<img src="http://jahil.github.io/images/bio-photo.jpg" class="bio-photo" alt="Mohsin Mirza bio photo"></a>
+
+<h3>Mohsin Mirza</h3>
+<p>Rusted Thoughts of SysAdmin</p>
+<a href="http://twitter.com/mohsinmirza" class="author-social" target="_blank"><i class="fa fa-twitter-square"></i> Twitter</a>
+
+
+
+
+
+<a href="http://github.com/jahil" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+<a href="http://stackoverflow.com/users/jahil" class="author-social" target="_blank"><i class="fa fa-stack-overflow"></i> Stackoverflow</a>
+
+
+
+
+
+        </div>
+        <p class="byline"><strong>LiME Module for Nexus 4 - Kitkat 4.4.4</strong> was published on <time datetime="2014-11-24T17:59:25+04:00">November 24, 2014</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
   
-    <h3>2014</h3>
-    
-    <article>
-      
-        <h2><a href="http://jahil.github.io/lime-module-for-nexus-4-kitkat-4-4-4/" title="LiME Module for Nexus 4 - Kitkat 4.4.4">LiME Module for Nexus 4 - Kitkat 4.4.4</a></h2>
-        <p></p>
-      
-    </article>
-    
-  
-      
-      
-      
-    
-    <article>
-      
-        <h2><a href="http://jahil.github.io/mimikatz/" title="Mimikatz">Mimikatz</a></h2>
-        <p></p>
-      
-    </article>
-  
-</div><!-- /#index -->
+  </article>
+</div><!-- /#main -->
 
 <div class="footer-wrap">
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://jahil.github.io/posts/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://jahil.github.io/mimikatz/" title="Mimikatz">Mimikatz</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
   <footer>
     <div class="google-ads">
   <!-- 320 x 50 ad -->
@@ -188,7 +258,7 @@
   })();
 </script>
 
+	        
 
-  
 </body>
 </html>
