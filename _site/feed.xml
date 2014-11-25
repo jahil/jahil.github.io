@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://jahil.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="http://jahil.github.io" />
-<updated>2014-11-25T14:46:04+04:00</updated>
+<updated>2014-11-25T15:37:14+04:00</updated>
 <id>http://jahil.github.io/</id>
 <author>
   <name>Mohsin Mirza</name>
@@ -33,6 +33,7 @@ Nexus 4 stock kernel doesnt support LKM, you can build module against stock kern
   &lt;li&gt;Android: 4.4.4 &lt;/li&gt;
   &lt;li&gt;Build: KTU84P &lt;/li&gt;
   &lt;li&gt;LiME Module: &lt;a href=&quot;https://github.com/jahil/jahil.github.io/raw/master/_site/lime-module-for-nexus-4-kitkat-4-4-4/lime-franco.ko.gz&quot;&gt;pre-compiled&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;volatilityfoundation.org&quot;&gt;Volatility&lt;/a&gt; Profile:&lt;a href=&quot;https://github.com/jahil/profiles/raw/master/Linux/Android/Nexus4/Nexus4-Franco-3.4.88.zip&quot;&gt;LinuxNexus4-Franco-3_4_88ARM&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;
@@ -64,7 +65,7 @@ $ adb forward tcp:4444 tcp:4444
 $ adb shell
 # insmod /sdcard/lime-mako.ko &amp;quot;path=tcp:4444 format=lime&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;from host machine use netcat to establish the connection and acquire memory&lt;/p&gt;
+&lt;p&gt;from host machine use netcat to establish the connection and acquire memory dump&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ nc localhost 4444 &amp;gt; mako.lime&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 

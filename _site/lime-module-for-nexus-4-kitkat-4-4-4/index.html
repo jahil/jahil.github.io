@@ -140,6 +140,7 @@ Nexus 4 stock kernel doesnt support LKM, you can build module against stock kern
   <li>Android: 4.4.4 </li>
   <li>Build: KTU84P </li>
   <li>LiME Module: <a href="https://github.com/jahil/jahil.github.io/raw/master/_site/lime-module-for-nexus-4-kitkat-4-4-4/lime-franco.ko.gz">pre-compiled</a></li>
+  <li><a href="volatilityfoundation.org">Volatility</a> Profile:<a href="https://github.com/jahil/profiles/raw/master/Linux/Android/Nexus4/Nexus4-Franco-3.4.88.zip">LinuxNexus4-Franco-3_4_88ARM</a></li>
 </ul>
 
 <p><br />
@@ -171,7 +172,7 @@ $ adb forward tcp:4444 tcp:4444
 $ adb shell
 # insmod /sdcard/lime-mako.ko &quot;path=tcp:4444 format=lime&quot;</code></pre></div>
 
-<p>from host machine use netcat to establish the connection and acquire memory</p>
+<p>from host machine use netcat to establish the connection and acquire memory dump</p>
 
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ nc localhost 4444 &gt; mako.lime</code></pre></div>
 
