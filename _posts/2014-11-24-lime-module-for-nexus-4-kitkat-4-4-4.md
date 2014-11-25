@@ -21,7 +21,7 @@ Nexus 4 stock kernel doesnt support LKM, you can build module against stock kern
 * [Volatility](http://volatilityfoundation.org) Profile: [LinuxNexus4-Franco-3_4_88ARM](https://github.com/jahil/profiles/raw/master/Linux/Android/Nexus4/Nexus4-Franco-3.4.88.zip)
 
 <br>
-*Tip: You can flash kernel with CWM or TWRP*
+*Tip: Flash kernel with CWM or TWRP*
 <br>
 
 ## Usage
@@ -63,4 +63,4 @@ Memory acquisition to sdcard
 # insmod /sdcard/lime-mako.ko "path=/sdcard/mako.lime format=lime"
 {% endhighlight %}
 
-VOLA!! - copy volatility profile into overlay directory and have fun!.
+The instructions in this post assume you have know volatility framework and usage.
