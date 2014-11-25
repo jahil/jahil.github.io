@@ -63,4 +63,4 @@ Memory acquisition to sdcard
 # insmod /sdcard/lime-mako.ko "path=/sdcard/mako.lime format=lime"
 {% endhighlight %}
 
-The instructions in this post assume you have know volatility framework and usage.
+Use volatility framework to extract information of interest from the dump you took from your nexus phone.
