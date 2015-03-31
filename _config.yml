@@ -26,15 +26,15 @@ kramdown:
 
 # Site owner
 owner:
-  name: Mohsin Mirza
+  name: Jahil
   avatar: bio-photo.jpg
   bio: "Rusted Thoughts of SysAdmin"
-  email: named.conf@gmail.com
+  email:
   disqus-shortname: blackroute
-  twitter: mohsinmirza
+  twitter:
   facebook:
   google:
-    plus: +MohsinMirza
+    plus:
     analytics: UA-57027537-1
     verify: 
     ad-client: 
